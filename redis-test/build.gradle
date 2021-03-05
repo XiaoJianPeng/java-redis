@@ -16,12 +16,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.data:spring-data-redis'
 	implementation 'redis.clients:jedis'
+	implementation 'org.apache.commons:commons-pool2'
 //	implementation 'org.redisson:redisson'
-//	testImplementation('org.springframework.boot:spring-boot-starter-test') {
-//		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-//	}
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
 }
 
-//test {
-//	useJUnitPlatform()
-//}
+test {
+	useJUnitPlatform()
+}
